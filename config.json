@@ -1,0 +1,22 @@
+{
+  "categories": ["cs.AI", "cs.LG", "cs.CL", "cs.CV", "stat.ML"],
+  "top_n": 10,
+  "max_candidates": 3000,
+  "weights": {
+    "large language model": 3,
+    "retrieval augmented": 3,
+    "retrieval-augmented": 3,
+    "agent": 2,
+    "reasoning": 2,
+    "evaluation": 2,
+    "benchmark": 2,
+    "efficient": 2,
+    "inference": 2,
+    "open-source": 3,
+    "code is available": 3,
+    "reproducib": 2,
+    "dataset": 1,
+    "robust": 1,
+    "safety": 1
+  }
+}

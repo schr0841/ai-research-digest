@@ -1,0 +1,41 @@
+name: Monthly AI research digest
+on:
+  schedule:
+    - cron: '17 14 3 * *'
+  workflow_dispatch:
+    inputs:
+      month:
+        description: 'Month to cover (YYYY-MM), blank for previous month'
+        required: false
+        type: string
+permissions:
+  contents: read
+  issues: write
+concurrency:
+  group: monthly-ai-digest
+  cancel-in-progress: false
+jobs:
+  digest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Verify core behavior
+        run: python -m unittest discover -s tests -v
+      - name: Generate and publish digest
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REQUESTED_MONTH: ${{ inputs.month }}
+        run: |
+          args=()
+          if [ -n "$REQUESTED_MONTH" ]; then args+=(--month "$REQUESTED_MONTH"); fi
+          python digest.py --publish "${args[@]}"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: ai-research-digest
+          path: digests/
+          retention-days: 90
