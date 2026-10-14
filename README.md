@@ -48,7 +48,7 @@ Results go to `digests/YYYY-MM.md` and `digests/YYYY-MM.json`. To publish locall
 
 ## Customize usefulness
 
-Edit `config.json`. Categories default to AI, machine learning, language, vision, and statistical machine learning. The ranking emphasizes practical LLM work, agents, reasoning, evaluation, efficiency, open source, and reproducibility. Add domain-specific phrases or increase their weights to prioritize your interests.
+Edit `config.json`. Categories cover AI, machine learning, language, vision, robotics, and statistical machine learning. The ranking covers broad AI research, balancing topic signals with evaluation, generalization, efficiency, open source, reproducibility, robustness, and safety. Add domain-specific phrases or increase their weights to prioritize your interests.
 
 Each keyword contributes its weight once if it appears anywhere in the title or abstract. Selection discounts previously represented keywords by half to improve topic variety. Matching is case-insensitive substring matching, so it is approximate. It is **not a scholarly measure of usefulness or quality**: no citation counts, expert review, full-paper reading, or independent evaluation are performed. The digest includes the author abstract, source links, and keyword signals rather than generated claims about results.
 

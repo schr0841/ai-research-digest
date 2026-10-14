@@ -1,22 +1,32 @@
 {
-  "categories": ["cs.AI", "cs.LG", "cs.CL", "cs.CV", "stat.ML"],
+  "categories": [
+    "cs.AI",
+    "cs.LG",
+    "cs.CL",
+    "cs.CV",
+    "cs.RO",
+    "stat.ML"
+  ],
   "top_n": 10,
   "max_candidates": 3000,
   "weights": {
-    "large language model": 3,
-    "retrieval augmented": 3,
-    "retrieval-augmented": 3,
-    "agent": 2,
-    "reasoning": 2,
+    "large language model": 1,
+    "computer vision": 1,
+    "robot": 1,
+    "reinforcement learning": 1,
+    "generative": 1,
+    "multimodal": 1,
+    "causal": 1,
+    "reasoning": 1,
     "evaluation": 2,
     "benchmark": 2,
     "efficient": 2,
-    "inference": 2,
+    "generalization": 2,
     "open-source": 3,
     "code is available": 3,
-    "reproducib": 2,
-    "dataset": 1,
-    "robust": 1,
-    "safety": 1
+    "reproducib": 3,
+    "dataset": 2,
+    "robust": 2,
+    "safety": 2
   }
 }
